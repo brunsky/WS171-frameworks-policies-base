@@ -227,7 +227,8 @@ class LockScreen extends LinearLayout implements KeyguardScreen, KeyguardUpdateM
     private void refreshUnlockIntructions() {
         if (mLockPatternUtils.isLockPatternEnabled()
                 || mUpdateMonitor.getSimState() == SimCard.State.PIN_REQUIRED) {
-            mLockInstructions.setText(R.string.lockscreen_instructions_when_pattern_enabled);
+            //mLockInstructions.setText(R.string.lockscreen_instructions_when_pattern_enabled);
+	    mLockInstructions.setText(R.string.lockscreen_instructions_when_pattern_disabled);
         } else {
             mLockInstructions.setText(R.string.lockscreen_instructions_when_pattern_disabled);
         }
@@ -321,6 +322,9 @@ class LockScreen extends LinearLayout implements KeyguardScreen, KeyguardUpdateM
             mHeaderSimOk1.setText(R.string.lockscreen_network_locked_message);
             mHeaderSimOk2.setVisibility(View.GONE);
         }
+        // GILL ADD
+        mHeaderSimOk1.setVisibility(View.GONE);
+        mHeaderSimOk2.setVisibility(View.GONE);
     }
 
     public void onSimStateChanged(SimCard.State simState) {

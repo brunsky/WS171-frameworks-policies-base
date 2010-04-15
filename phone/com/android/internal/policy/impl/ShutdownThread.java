@@ -159,6 +159,7 @@ final class ShutdownThread extends Thread {
                     radioOff = true;
                 }
             }
+            radioOff = true;
             if (radioOff && bluetoothOff) {
                 Log.d(TAG, "Radio and Bluetooth shutdown complete.");
                 break;

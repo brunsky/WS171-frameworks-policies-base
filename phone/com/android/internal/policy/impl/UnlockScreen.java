@@ -98,12 +98,14 @@ class UnlockScreen extends LinearLayoutWithDefaultTouchRecepient
     private void updateFooter(FooterMode mode) {
         switch (mode) {
             case Normal:
-                mFooterNormal.setVisibility(View.VISIBLE);
+                //mFooterNormal.setVisibility(View.VISIBLE);
+		mFooterNormal.setVisibility(View.GONE);
                 mFooterForgotPattern.setVisibility(View.GONE);
                 break;
             case ForgotLockPattern:
                 mFooterNormal.setVisibility(View.GONE);
-                mFooterForgotPattern.setVisibility(View.VISIBLE);
+                mFooterForgotPattern.setVisibility(View.GONE);
+		//mFooterForgotPattern.setVisibility(View.VISIBLE);
                 break;
             case VerifyUnlocked:
                 mFooterNormal.setVisibility(View.GONE);

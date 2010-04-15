@@ -168,7 +168,7 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
                 // silent mode
                 mSilentModeToggle,
                 // next: airplane mode
-                mAirplaneModeOn,
+                //mAirplaneModeOn,
                 // last: power off
                 new SinglePressAction(
                         com.android.internal.R.drawable.ic_lock_power_off,
